@@ -1,0 +1,141 @@
+\documentclass[10pt,letterpaper]{article}
+
+\usepackage[top=0.8in,bottom=0.8in,left=0.9in,right=0.9in]{geometry}
+\usepackage[sfdefault,scaled=1.02]{FiraSans}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,urlcolor=linkblue,linkcolor=linkblue]{hyperref}
+
+\definecolor{linkblue}{HTML}{004F90}
+\definecolor{graytext}{HTML}{666666}
+
+\setlength{\parindent}{0pt}
+\pagestyle{empty}
+
+% ---- 見出し：太字 + 全幅の罫線 ----
+\newcommand{\cvsection}[1]{%
+  \vspace{1.05em}%
+  {\fontsize{11.5}{14}\selectfont\bfseries #1}\par
+  \vspace{3pt}%
+  \hrule height 0.5pt
+  \vspace{0.62em}%
+}
+
+% ---- 本文：字下げしたラベルなしリスト ----
+\newenvironment{cvlist}{%
+  \begin{list}{}{%
+    \setlength{\leftmargin}{1.7em}%
+    \setlength{\labelwidth}{0pt}%
+    \setlength{\labelsep}{0pt}%
+    \setlength{\itemsep}{0.50em}%
+    \setlength{\parsep}{0pt}%
+    \setlength{\topsep}{0pt}%
+    \setlength{\partopsep}{0pt}%
+  }%
+}{\end{list}}
+
+% ---- 行間を詰めた版（学歴・一覧向け）----
+\newenvironment{cvlisttight}{%
+  \begin{list}{}{%
+    \setlength{\leftmargin}{1.7em}%
+    \setlength{\labelwidth}{0pt}%
+    \setlength{\labelsep}{0pt}%
+    \setlength{\itemsep}{0.32em}%
+    \setlength{\parsep}{0pt}%
+    \setlength{\topsep}{0pt}%
+    \setlength{\partopsep}{0pt}%
+  }%
+}{\end{list}}
+
+\newcommand{\entry}{\item[]}
+\newcommand{\dated}[2]{#1\hfill\textit{#2}}
+\newcommand{\subhead}[1]{\item[]{\bfseries #1}}
+
+\begin{document}
+
+{\raggedleft\small\itshape\color{graytext} Last updated: September 24, 2026\par}
+
+\vspace{0.8em}
+\begin{center}
+{\LARGE\bfseries Hideyuki Tomiyama}
+\end{center}
+\vspace{0.6em}
+
+\cvsection{Contact Information}
+\begin{cvlisttight}
+\entry Email: \href{mailto:hkt5140@psu.edu}{hkt5140@psu.edu}
+\entry Website: \href{https://thideyuki.github.io}{\texttt{https://thideyuki.github.io}}
+\end{cvlisttight}
+
+\cvsection{Education}
+\begin{cvlist}
+\entry Ph.D.\ in Economics, The Pennsylvania State University, 2021 -- 2027 (expected)
+\entry M.A.\ in Economics, Keio University, 2018 -- 2020
+\entry B.A.\ in Economics, Keio University, 2014 -- 2018
+\end{cvlist}
+
+\cvsection{Fields of Interest}
+\begin{cvlisttight}
+\entry Econometrics, Labor Economics, Applied Econometrics
+\end{cvlisttight}
+
+\cvsection{Job Market Paper}
+\begin{cvlist}
+\entry Causal Model of a Two-Sided Matching Market: Application to Intergenerational
+       Spillover Effects of Education
+\end{cvlist}
+
+\cvsection{Working Papers}
+\begin{cvlist}
+\entry Identification and Estimation of Panel Regression Models with Unknown Aggregated
+       Spatial Units
+\end{cvlist}
+
+\cvsection{Publications}
+\begin{cvlist}
+\entry Inference on Incomplete Information Games with Multi-Dimensional Actions,
+       with Taisuke Otsu. \textit{Economics Letters}, Volume 215, 2022
+\end{cvlist}
+
+\cvsection{Teaching Experience}
+\begin{cvlisttight}
+\subhead{The Pennsylvania State University (Teaching Assistant)}
+\entry \dated{ECON 402, Decision Making and Strategy in Economics}{Spring 2026}
+\entry \dated{ECON 454, Economics of Mergers}{Fall 2024 -- Fall 2025}
+\entry \dated{ECON 315, Labor Economics}{Spring 2024}
+\entry \dated{ECON 451, Monetary Theory and Policy}{Fall 2023}
+\entry \dated{ECON 104, Introductory Macroeconomic Analysis and Policy}{Spring 2022}
+\entry \dated{ECON 102, Introductory Microeconomic Analysis and Policy}{Fall 2021}
+\vspace{0.45em}
+\subhead{Keio University (Teaching Assistant)}
+\entry \dated{Industrial Organization, Economic Development,
+       Intermediate Macroeconomics}{2018 -- 2021}
+\end{cvlisttight}
+
+\cvsection{Seminars and Conferences}
+\begin{cvlist}
+\entry 2026: Summer Workshop on Economic Theory;
+       The Pennsylvania State University (scheduled)
+\entry 2020: Summer Workshop on Economic Theory;
+       Japanese Economic Association Spring Meeting
+\end{cvlist}
+
+\cvsection{Honors and Fellowships}
+\begin{cvlist}
+\entry 2020 -- 2021: Research Fellowship for Young Scientists (DC1),
+       Japan Society for the Promotion of Science
+\entry 2020 -- 2021: Adjunct Researcher, Faculty of Economics, Keio University
+\end{cvlist}
+
+\cvsection{Languages}
+\begin{cvlisttight}
+\entry English (fluent), Japanese (native)
+\end{cvlisttight}
+
+\cvsection{Citizenship}
+\begin{cvlisttight}
+\entry Japan
+\end{cvlisttight}
+
+\end{document}
