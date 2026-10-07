@@ -49,12 +49,25 @@
 }{\end{list}}
 
 \newcommand{\entry}{\item[]}
+
+% ---- 要旨：一段下げ・小さめ・両端揃え ----
+\newenvironment{abstractblock}{%
+  \begingroup
+  \fontsize{8.6}{10.6}\selectfont
+  \begin{list}{}{%
+    \setlength{\leftmargin}{0.9em}%
+    \setlength{\rightmargin}{0.4em}%
+    \setlength{\topsep}{0.15em}%
+    \setlength{\parsep}{0pt}%
+    \setlength{\itemsep}{0pt}%
+  }\item[]\textit{Abstract.}\ %
+}{\end{list}\endgroup}
 \newcommand{\dated}[2]{#1\hfill\textit{#2}}
 \newcommand{\subhead}[1]{\item[]{\bfseries #1}}
 
 \begin{document}
 
-{\raggedleft\small\itshape\color{graytext} Last updated: September 29, 2026\par}
+{\raggedleft\small\itshape\color{graytext} Last updated: October 7, 2026\par}
 
 \vspace{0.8em}
 \begin{center}
@@ -84,12 +97,20 @@
 \begin{cvlist}
 \entry Causal Model of a Two-Sided Matching Market: Application to Intergenerational
        Spillover Effects of Education
+\item[]\vspace{-0.15em}
+\begin{abstractblock}
+This paper studies a heterogeneous treatment effect model with instrumental variables in an endogenous one-to-one two-sided matching market. Our leading example is the effect of parental education on children's outcomes, such as income, educational attainment, and health. Under assortative matching, it is difficult to justify the standard instrumental variables methods (e.g., two-stage least squares) that use treatments and instruments from both sides. To overcome this problem, we explicitly consider a selection model in which each agent selects both their own treatment status and that of their matched partner. We provide point and partial identification results for various causal parameters, including the average treatment effect. The key identification assumption is matching on observables, which requires that pairs are randomly matched conditional on observed characteristics and rules out assortative matching on unobservables. We also propose inference procedures for these causal parameters. Finally, we apply our framework to study the treatment effect of parents' college attendance on the educational investment they make in their child, using Japanese household-level data.
+\end{abstractblock}
 \end{cvlist}
 
 \cvsection{Working Papers}
 \begin{cvlist}
 \entry Identification and Estimation of Panel Regression Models with Unknown Aggregated
        Spatial Units
+\item[]\vspace{-0.15em}
+\begin{abstractblock}
+This paper studies panel regression models in which each unit corresponds to an aggregated spatial unit. Each aggregated unit is a collection of multiple finer units in the raw dataset. The variables of each aggregated unit can be constructed as the sum of finer unit-level variables in the aggregated unit. However, the researcher does not know the correct delineation of aggregated units under which the structural equation holds. Examples include regression models of agglomeration economies and game theoretic models of spatial entry competitions. We show that the derivative of the structural function can be nonparametrically identified from observational panel data on finer units under certain conditions. The key identification condition is the mean independence between the structural error terms and the vector of finer unit-level exogenous variables. The correct delineation can be also identified if the structural function is nonaffine with respect to the regressors. The framework can be applied to other aggregation problems such as industry aggregation. We propose several computationally feasible inference procedures for parametric models via GMM-type objective functions. As an empirical illustration, we apply the methodology to the economics of agglomeration using U.S. data.
+\end{abstractblock}
 \end{cvlist}
 
 \cvsection{Publications}
