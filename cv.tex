@@ -1,7 +1,7 @@
 \documentclass[10pt,letterpaper]{article}
 
 \usepackage[top=0.8in,bottom=0.8in,left=0.9in,right=0.9in]{geometry}
-\usepackage[sfdefault,scaled=1.02]{FiraSans}
+\usepackage[default,scale=1.0]{lato}
 \usepackage[T1]{fontenc}
 \usepackage{enumitem}
 \usepackage{xcolor}
@@ -53,23 +53,20 @@
 % ---- 要旨：一段下げ・小さめ・両端揃え ----
 \newenvironment{abstractblock}{%
   \begingroup
-  \fontsize{8.6}{10.6}\selectfont
+  \fontsize{8.6}{11.3}\selectfont
   \begin{list}{}{%
     \setlength{\leftmargin}{0.9em}%
     \setlength{\rightmargin}{0.4em}%
     \setlength{\topsep}{0.15em}%
     \setlength{\parsep}{0pt}%
     \setlength{\itemsep}{0pt}%
-  }\item[]\textit{Abstract.}\ %
+  }\item[]\textbf{Abstract.}\ %
 }{\end{list}\endgroup}
 \newcommand{\dated}[2]{#1\hfill\textit{#2}}
 \newcommand{\subhead}[1]{\item[]{\bfseries #1}}
 
 \begin{document}
 
-{\raggedleft\small\itshape\color{graytext} Last updated: October 7, 2026\par}
-
-\vspace{0.8em}
 \begin{center}
 {\LARGE\bfseries Hideyuki Tomiyama}
 \end{center}
